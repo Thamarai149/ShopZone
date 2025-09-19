@@ -1,0 +1,357 @@
+/* Overall checkout page container */
+.checkout-container {
+  background-color: #e0f2f1; /* Light teal background for page */
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #004d40; /* Dark teal text */
+}
+
+/* Main checkout content card */
+.checkout-content {
+  max-width: 700px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 30px 40px 30px;
+  box-shadow: 0 12px 30px rgba(0, 77, 64, 0.1);
+}
+
+/* Section title styling */
+.section-title {
+  font-size: 1.6rem;
+  border-bottom: 3px solid #004d40;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+}
+
+/* Order summary container with background and padding */
+.order-summary {
+  background-color: #e8f5e9; /* Soft green background */
+  border-radius: 14px;
+  padding: 25px 30px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 35px;
+}
+
+/* List of cart items */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+/* Single cart item row with flex */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Info container: image + details */
+.item-info {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* Product image styling */
+.item-image {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1.5px solid #a5d6a7;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+}
+
+/* Product text details */
+.item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #388e3c;
+}
+
+.item-price-qty,
+.item-size,
+.item-color {
+  font-size: 0.95rem;
+  color: #2e7d32;
+}
+
+/* Total for each line item */
+.item-total {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1b5e20;
+  flex-shrink: 0;
+}
+
+/* Price breakdown container */
+.price-breakdown {
+  border-top: 2px solid #c8e6c9;
+  padding-top: 20px;
+  font-weight: 600;
+  color: #2e7d32;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.price-row,
+.total-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Free shipping label */
+.free-shipping {
+  color: #4caf50;
+  font-weight: 700;
+}
+
+/* Customer info preview */
+.customer-info-preview {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f0f4f3;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.02);
+}
+
+.customer-details p {
+  margin: 8px 0;
+  font-weight: 600;
+  color: #00796b;
+}
+
+.edit-info-btn {
+  margin-top: 15px;
+  background-color: #388e3c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.edit-info-btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Checkout action buttons */
+.checkout-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.proceed-btn,
+.back-btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 160px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.proceed-btn {
+  background-color: #388e3c;
+  color: white;
+}
+
+.proceed-btn:hover {
+  background-color: #1b5e20;
+}
+
+.back-btn {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+.back-btn:hover {
+  background-color: #a5d6a7;
+}
+
+/* Empty cart view */
+.empty-cart {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.empty-cart-icon {
+  font-size: 6rem;
+  margin-bottom: 20px;
+  color: #4caf50;
+}
+
+.empty-cart-title {
+  font-size: 2.5rem;
+  color: #388e3c;
+  margin-bottom: 15px;
+}
+
+.empty-cart-message {
+  font-size: 1.1rem;
+  color: #2e7d32;
+  margin-bottom: 30px;
+}
+
+.continue-shopping-btn {
+  font-size: 1.1rem;
+  background-color: #388e3c;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-shopping-btn:hover {
+  background-color: #1b5e20;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(44, 62, 80, 0.12);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Delivery form modal */
+.customer-form-modal {
+  background: #e0f7fa;
+  border-radius: 1.25rem;
+  padding: 2.2rem 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+  width: 100%;
+  max-width: 400px;
+  min-width: 320px;
+}
+
+/* Modal header */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0277bd;
+}
+.close-btn {
+  background: #7c9fff;
+  color: #fff;
+  border: none;
+  border-radius: 0.7rem;
+  width: 40px;
+  height: 40px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+/* Form groups and inputs */
+.customer-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 1rem;
+  color: #0d47a1;
+}
+
+.customer-form input,
+.customer-form textarea {
+  padding: 8px 12px;
+  border: 1.5px solid #90caf9;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+.customer-form input:focus,
+.customer-form textarea:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+}
+
+/* Error message */
+.customer-form .error,
+.customer-form .error-text {
+  color: #d32f2f;
+  font-size: 0.95rem;
+  margin-top: 3px;
+}
+
+/* Save and Cancel buttons */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.save-btn,
+.cancel-btn {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  background: #7c9fff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+}
+
+.save-btn:hover {
+  background: #1976d2;
+}
+.cancel-btn {
+  background: #b0bec5;
+  color: #463e3f;
+}
+.cancel-btn:hover {
+  background: #90a4ae;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .customer-form-modal {
+    padding: 1.5rem 0.7rem;
+    min-width: auto;
+  }
+  .save-btn,
+  .cancel-btn {
+    font-size: 0.95rem;
+    padding: 10px 0;
+  }
+}
